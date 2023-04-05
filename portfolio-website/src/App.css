@@ -2,12 +2,20 @@
 .AppHome {
   background-color: black;
   height: 100%;
+  width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .background-image {
-  width: 100%;
+  position: absolute;
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 .background-video {
   width: 100%;
@@ -25,22 +33,21 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: box-shadow 0.3s ease;
-  position: absolute;
-  top:53%;
-  left: 44%;
+  top: 50%;
+  margin-top: 10px;
+  z-index: 3;
 }
 
 .enter-button:hover {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .AppHome > h1 {
-  z-index: 100;
-  position: absolute;
+  z-index: 3;
 }
 .WelcomeText {
   color: gainsboro;
-  top: 15%;
-  left: 41%;
+  margin-top: 105px;
+  margin-bottom: 5px;
   text-shadow:
   0 0 7px #fff,
     0 0 151px #0fa;
@@ -50,14 +57,13 @@
   text-shadow:
   0 0 7px #fff,
     0 0 151px #0fa;
-  top: 25%;
-  left: 37%;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 .ArmaanText {
   color: white;
   animation: pulsate 2.5s infinite alternate;  
-  top: 36%;
-  left: 42.5%;   
+  margin-top: 11px;
 }
 
 

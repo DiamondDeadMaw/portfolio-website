@@ -1,0 +1,4 @@
+Name,Description,Link,Image
+Python Programmable Computer,"Building on concepts introduced in the book ""The Elements of Computing Systems"" by Noam Nisan and Shimon Schocken, I designed the required circuitry, and simulated it using Python- from basic AND gates, to RAM, to the CPU.
+Features an interactive GUI to stop and start the CPU clock, and see memory states.",https://github.com/DiamondDeadMaw/Python-Computer-Simulator,program_computer.png
+Python Software Rasterizer,"Enamoured with the way games were able to convert three-dimensional points to two-dimensional objects on a screen, my research led me to a series of matrix operations. Because of Python's inherent slow speed, I used highly optimized vector math libraries, which required complete refactoring of my approach. Currently, only .obj files are supported.",https://github.com/DiamondDeadMaw/Python-3D-Rasterizer,python_rasterizer.png
