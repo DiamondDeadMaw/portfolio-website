@@ -12,7 +12,7 @@ import desktop from "./assets/images/desktop.png"
 import projects from "./assets/images/projects_icon.png"
 import text from "./assets/images/text_icon.png"
 import pdf from "./assets/images/pdf_icon.png"
-import power from "./assets/images/power_button.jpg"
+import power from "./assets/images/power_button.png"
 
 //Other files
 import resume from "./assets/other/resume.pdf"
@@ -26,23 +26,34 @@ const [showProjects, setShowProjects] = useState(false)
 const [showAbout, setShowAbout] = useState(false)
 const [showContact, setShowContact] = useState(false)
 
-const [taskbarIcons, setTaskbarIcons] = useState([<img className='power-button' src={power} onClick={onPowerClicked} />])
+const [taskbarIcons, setTaskbarIcons] = useState([
+    <div className='taskbar-icon-container'>
+        <img className='taskbar-icon' src={power} onClick={onPowerClicked} />
+    </div>
+])
 
+function TaskbarIcon({s}) {
+    return (
+        <div className="taskber-icon-container">
+            <img className='taskbar-icon' src={s}/>
+        </div>
+    )
+}
 function openProjects() {
     setShowProjects(!showProjects)
-    setTaskbarIcons(old => [...old, <img className='taskbar-icon' src={projects} />])
+    setTaskbarIcons(old => [...old, <TaskbarIcon s={projects}/>])
     console.log(taskbarIcons[0])
 }
 
 function openAbout() {
     setShowAbout(!showAbout)   
-    setTaskbarIcons(old => [...old, <img className='taskbar-icon' src={text} />])
+    setTaskbarIcons(old => [...old, <TaskbarIcon s={text}/>])
 
 }
 
 function openContact() {
     setShowContact(!showContact)
-    setTaskbarIcons(old => [...old, <img className='taskbar-icon' src={text} />])
+    setTaskbarIcons(old => [...old, <TaskbarIcon s={text}/>])
 }
 
 function openResume() {
@@ -56,10 +67,12 @@ function closeProjects() {
     setTaskbarIcons(taskbarIcons.slice(0,-1))
 }
 function closeAbout() {
-
+    setShowAbout(false)
+    setTaskbarIcons(taskbarIcons.slice(0,-1))
 }
 function closeContact() {
-
+    setShowContact(false)
+    setTaskbarIcons(taskbarIcons.slice(0,-1))
 }
 
 const functionsToCall = [openProjects, openAbout, openContact, openResume]
@@ -87,8 +100,8 @@ function AppIcon(props) {
 
 
             {showProjects && <Projects onClickCross= { () => {closeProjects()}}/>}
-            {showAbout && <TextFile onClickCross={ () => {setShowAbout(false)} } title="About.txt" content={<AboutContent/>}/>}
-            {showContact && <TextFile onClickCross={() => {setShowContact(false)}} title="Contact.txt" content={<ContactContent/>}/>}
+            {showAbout && <TextFile onClickCross={ () => {closeAbout()} } title="About.txt" content={<AboutContent/>}/>}
+            {showContact && <TextFile onClickCross={() => {closeContact()}} title="Contact.txt" content={<ContactContent/>}/>}
 
             <div className="taskbar">
             {taskbarIcons}

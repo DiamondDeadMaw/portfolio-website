@@ -10,5 +10,17 @@
     "Description": "Enamoured with the way games were able to convert three-dimensional points to two-dimensional objects on a screen, my research led me to a series of matrix operations. Because of Python's inherent slow speed, I used highly optimized vector math libraries, which required complete refactoring of my approach. Currently, only .obj files are supported.",
     "Link": "https://github.com/DiamondDeadMaw/Python-3D-Rasterizer",
     "Image": "python_rasterizer.png"
+  },
+  {
+    "Name": "Pop-up Comments",
+    "Description": "Annoyed by the fact that to see comments on a YouTube video you have to scroll down, thereby missing parts of the video, I created an extension that added a button to show comments in a pop-up window.",
+    "Link": "https://chrome.google.com/webstore/detail/youtube-popup-comments/khlcpbakdpgeghfadigjkkmmhdccfmkk?hl=en&authuser=0",
+    "Image": "pop_up_comments.jpg"
+  },
+  {
+    "Name": "Hardware Simulator",
+    "Description": "Following my interest in the inner workings of computers, I found that learning about circuits was best done graphically, and interactively. I created a 'game' that allows users to drag- and- drop logic gates, and form connections intuitively. Users can then create their own logic gates, combining these to create more and more complex circuits. This was later used in my school to teach boolean logic.",
+    "Link": "https://github.com/DiamondDeadMaw/Hardware-Simulator",
+    "Image": "hardware_sim.png"
   }
 ]

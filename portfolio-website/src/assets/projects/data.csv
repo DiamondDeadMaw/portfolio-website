@@ -1,4 +1,14 @@
-Name,Description,Link,Image
+﻿Name,Description,Link,Image
 Python Programmable Computer,"Building on concepts introduced in the book ""The Elements of Computing Systems"" by Noam Nisan and Shimon Schocken, I designed the required circuitry, and simulated it using Python- from basic AND gates, to RAM, to the CPU.
 Features an interactive GUI to stop and start the CPU clock, and see memory states.",https://github.com/DiamondDeadMaw/Python-Computer-Simulator,program_computer.png
 Python Software Rasterizer,"Enamoured with the way games were able to convert three-dimensional points to two-dimensional objects on a screen, my research led me to a series of matrix operations. Because of Python's inherent slow speed, I used highly optimized vector math libraries, which required complete refactoring of my approach. Currently, only .obj files are supported.",https://github.com/DiamondDeadMaw/Python-3D-Rasterizer,python_rasterizer.png
+Pop-up Comments,"Annoyed by the fact that to see comments on a YouTube video you have to scroll down, thereby missing parts of the video, I created an extension that added a button to show comments in a pop-up window.",https://chrome.google.com/webstore/detail/youtube-popup-comments/khlcpbakdpgeghfadigjkkmmhdccfmkk?hl=en&authuser=0,pop_up_comments.jpg
+Hardware Simulator,"Following my interest in the inner workings of computers, I found that learning about circuits was best done graphically, and interactively. I created a 'game' that allows users to drag- and- drop logic gates, and form connections intuitively. Users can then create their own logic gates, combining these to create more and more complex circuits. This was later used in my school to teach boolean logic.",https://github.com/DiamondDeadMaw/Hardware-Simulator,hardware_sim.png
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
