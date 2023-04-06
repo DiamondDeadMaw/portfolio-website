@@ -5,40 +5,61 @@ import "./Landing.css"
 
 //Components
 import Projects from "./Projects"
+import TextFile from './TextFile'
 
 //Images
 import desktop from "./assets/images/desktop.png"
 import projects from "./assets/images/projects_icon.png"
 import text from "./assets/images/text_icon.png"
 import pdf from "./assets/images/pdf_icon.png"
-
+import power from "./assets/images/power_button.jpg"
 
 //Other files
 import resume from "./assets/other/resume.pdf"
 
 
-
-export default function Landing() {
+export default function Landing({onPowerClicked}) {
 
     const possibleIcons = ["Projects", "About", "Contact", "Resumé"]
 
 const [showProjects, setShowProjects] = useState(false)
+const [showAbout, setShowAbout] = useState(false)
+const [showContact, setShowContact] = useState(false)
+
+const [taskbarIcons, setTaskbarIcons] = useState([<img className='power-button' src={power} onClick={onPowerClicked} />])
 
 function openProjects() {
     setShowProjects(!showProjects)
+    setTaskbarIcons(old => [...old, <img className='taskbar-icon' src={projects} />])
+    console.log(taskbarIcons[0])
 }
 
 function openAbout() {
-    return null   
+    setShowAbout(!showAbout)   
+    setTaskbarIcons(old => [...old, <img className='taskbar-icon' src={text} />])
+
 }
 
 function openContact() {
-    return null
+    setShowContact(!showContact)
+    setTaskbarIcons(old => [...old, <img className='taskbar-icon' src={text} />])
 }
 
 function openResume() {
     console.log("Clicked")
     window.open(resume, "_blank")
+}
+
+
+function closeProjects() {
+    setShowProjects(false)
+    setTaskbarIcons(taskbarIcons.slice(0,-1))
+}
+function closeAbout() {
+
+}
+function closeContact() {
+
 }
 
 const functionsToCall = [openProjects, openAbout, openContact, openResume]
@@ -65,9 +86,38 @@ function AppIcon(props) {
             </div>
 
 
-            {showProjects && <Projects/>}
+            {showProjects && <Projects onClickCross= { () => {closeProjects()}}/>}
+            {showAbout && <TextFile onClickCross={ () => {setShowAbout(false)} } title="About.txt" content={<AboutContent/>}/>}
+            {showContact && <TextFile onClickCross={() => {setShowContact(false)}} title="Contact.txt" content={<ContactContent/>}/>}
 
+            <div className="taskbar">
+            {taskbarIcons}
             </div>
+            </div>
+        </div>
+    )
+}
+
+function AboutContent() {
+    return (
+        <div className="content">
+            <p className='content-text'>I am an 18 year old living in India, aspiring to one day be
+         at the forefront of developement in my chosen field of study.</p>
+         <p className='content-text'> I'm not quite sure what that will be just yet though, as my curiosity
+         is sometimes detrimental, leading me to pursue many things at the same time.</p>
+         <p className='content-text'>In fact, this website was created in 2 days after I learned React in order to
+         create a website for a college competition. Till now, the hardest part of this was centering all my divs.</p>
+        </div>
+    )
+}
+
+function ContactContent() {
+    return (
+        <div className="content">
+            <p className='content-text'>Github:</p>
+            <a href="https://github.com/diamonddeadmaw" target="_blank" className='content-link'>github.com/diamonddeadmaw</a>
+            <p className='content-text'>LinkedIn:</p>
+            <a href="https://linkedin.com/in/armaanshah3103/" target="_blank" className='content-link'>linkedin.com/in/armaanshah3103/</a>
         </div>
     )
 }

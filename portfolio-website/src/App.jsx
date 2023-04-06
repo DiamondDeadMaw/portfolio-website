@@ -20,8 +20,7 @@ function HomePageBackground(props) {
 
 function App() {
   const [showLanding, setShowLanding] = useState(false);
-  function AppHome() {
-    const [playVideo, setPlayVideo] = useState(false);
+  const [playVideo, setPlayVideo] = useState(false);
     const [hideContent, setHideContent] = useState(false)
   
     const handleButtonClick = () => {
@@ -29,6 +28,14 @@ function App() {
       setHideContent(true);
       setTimeout(() => {setShowLanding(true);}, 5000);
     };
+
+    const returnToPage = () => {
+      setPlayVideo(false);
+      setHideContent(false);
+      setShowLanding(false);
+    }
+  function AppHome() {
+    
   
   
     if (hideContent) {
@@ -53,7 +60,7 @@ function App() {
   if (!showLanding) {
     return <AppHome/>
   } else {
-    return <Landing/>
+    return <Landing onPowerClicked={() => {returnToPage()}}/>
   }
 }
 

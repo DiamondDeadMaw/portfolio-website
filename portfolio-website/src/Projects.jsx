@@ -21,12 +21,13 @@ function InfoPage(p) {
     )
 }
 
+// to add a new project, you need to add entries to the excel, update the json, and add images into the public folder
 function CardInfo(p) {
     const [showMoreInfo, setShowMoreInfo] = useState(false)
     return (
         <div className='card-info-container'>
            <img src={info} className='info-icon' onClick={() => setShowMoreInfo(true)}/>
-           <a href={p.link} className='link-icon' target='_blank'>
+           <a href={p.link} className='link-icon' target='_blank' rel="noopener noreferrer">
            <img src={link} className='link-icon' />
            </a>
             {showMoreInfo && <InfoPage desc = {p.desc}/>}
@@ -71,21 +72,21 @@ function MainContent() {
     )
 }
 
-function Cross() {
+function Cross({close}) {
     const [isHovered, setIsHovered] = useState(false);
     
     return (
-        <img className="cross-image"src={isHovered? hovered:unhovered} onMouseOver={()=>{setIsHovered(true)}}  onMouseOut={ ()=> {setIsHovered(false)} }  />
+        <img className="cross-image"src={isHovered? hovered:unhovered} onMouseOver={()=>{setIsHovered(true)}}  onMouseOut={ ()=> {setIsHovered(false)} } onClick={close} />
     )
 }
 
-export default function Projects() {
+export default function Projects({onClickCross}) {
     return (
         <div className='window'>
             
             <img src={browser} className='browser-background'/>
-            <Cross />
-            <a href='https://github.com/DiamondDeadMaw' className='link-text'>https://github.com/DiamondDeadMaw</a>
+            <Cross  close= {onClickCross}/>
+            <a href='https://github.com/DiamondDeadMaw' className='link-text' rel="noopener noreferrer" target="_blank">https://github.com/DiamondDeadMaw</a>
             <MainContent />
 
         </div>
