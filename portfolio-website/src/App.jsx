@@ -2,7 +2,7 @@ import { useState } from 'react'
 import {Routes, Route, useNavigate} from "react-router-dom"
 import './App.css'
 import backgroundImage from './assets/images/home_background_image.jpg'
-import backgroundVideo from './assets/videos/video_placeholder.mp4'
+import backgroundVideo from './assets/videos/background_video.mp4'
 import Landing from "./Landing"
 
 
@@ -26,7 +26,7 @@ function App() {
     const handleButtonClick = () => {
       setPlayVideo(true);
       setHideContent(true);
-      setTimeout(() => {setShowLanding(true);}, 5000);
+      setTimeout(() => {setShowLanding(true);}, 7500);
     };
 
     const returnToPage = () => {
@@ -48,6 +48,7 @@ function App() {
       return (
         <div className="AppHome">
             <HomePageBackground toPlay={playVideo} />
+        <video src={backgroundVideo} style={{display:'none'}}></video>
         <h1 className='WelcomeText'>Welcome</h1>
         <h1 className='WorldOfText'> to the world of</h1>
         <h1 className='ArmaanText'>Armaan</h1>

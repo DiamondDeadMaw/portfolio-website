@@ -120,6 +120,8 @@ function AboutContent() {
          is sometimes detrimental, leading me to pursue many things at the same time.</p>
          <p className='content-text'>In fact, this website was created in 2 days after I learned React in order to
          create a website for a college competition. Till now, the hardest part of this was centering all my divs.</p>
+         <p className='content-text'> My biggest interests include compiler design, the creation of hardware for machine learning,
+         and game developement.</p>
         </div>
     )
 }
