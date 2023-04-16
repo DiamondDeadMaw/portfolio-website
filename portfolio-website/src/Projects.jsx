@@ -38,7 +38,8 @@ function CardInfo(p) {
 
 //had to move images to public as they could not be found in source
 const Image = ({ filename }) => {
-    const imagePath = "https://armaanshah.netlify.app/public" + `/project_images/${filename}`;
+    //for netlify, wont work on local machine
+    const imagePath = `./project_images/${filename}`;
     return <img className="card-image" src={imagePath} alt={filename} />;
   };
   
