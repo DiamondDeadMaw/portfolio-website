@@ -58,6 +58,7 @@ async function getSpreadSheet({spreadsheetId, auth}) {
 const imageLink = "https://raw.githubusercontent.com/DiamondDeadMaw/portfolio-website/main/portfolio-website/public/project_images/"
 
 app.get('/values', (req, res) => {
+    console.log("Serving data to " + req.get("host" + req.originalUrl))
     getValues().then(r => {
         const [keys, ...values] = r;
 
