@@ -87,7 +87,7 @@ function AppIcon(props) {
 const [project_data, setProjectData] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:8000/values")
+        fetch("https://portfolio-website-backend-jygb.onrender.com/values")
           .then((res) => res.json())
           .then((data) => setProjectData(data));
       }, []);
