@@ -38,7 +38,7 @@ function CardInfo(p) {
 
 //had to move images to public as they could not be found in source
 const Image = ({ filename }) => {
-    const imagePath = `../public/project_images/${filename}`;
+    const imagePath = process.env.PUBLIC_URL + `/project_images/${filename}`;
     return <img className="card-image" src={imagePath} alt={filename} />;
   };
   
