@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import "./Projects.css"
 import { useState } from 'react'
@@ -11,7 +11,8 @@ import hovered from "./assets/images/cross_hovered.png"
 import info from "./assets/images/info_icon.png"
 import link from "./assets/images/link_icon.png"
 
-import project_data from "./assets/projects/projects_data.json"
+
+
 
 function InfoPage(p) {
     return (
@@ -55,7 +56,8 @@ function Card(props) {
 }
 
 
-function MainContent() {
+function MainContent({project_data}) {
+    
     const cards = []
     for (let i = 0; i< project_data.length; i++) {
         cards.push(<Card 
@@ -80,14 +82,15 @@ function Cross({close}) {
     )
 }
 
-export default function Projects({onClickCross}) {
+export default function Projects({onClickCross, project_data}) {
+    
     return (
         <div className='window'>
             
             <img src={browser} className='browser-background'/>
             <Cross  close= {onClickCross}/>
             <a href='https://github.com/DiamondDeadMaw' className='link-text' rel="noopener noreferrer" target="_blank">https://github.com/DiamondDeadMaw</a>
-            <MainContent />
+            <MainContent project_data={project_data} />
 
         </div>
     )

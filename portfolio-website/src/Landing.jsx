@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "./Landing.css"
 
 //Components
@@ -84,7 +84,13 @@ function AppIcon(props) {
     </div>
 }
 
+const [project_data, setProjectData] = useState({});
 
+    useEffect(() => {
+        fetch("http://localhost:8000/values")
+          .then((res) => res.json())
+          .then((data) => setProjectData(data));
+      }, []);
     return (
         <div className="container">
             <div className='desktop-container'>
@@ -99,7 +105,7 @@ function AppIcon(props) {
             </div>
 
 
-            {showProjects && <Projects onClickCross= { () => {closeProjects()}}/>}
+            {showProjects && <Projects onClickCross= { () => {closeProjects()}}  project_data={project_data}/>}
             {showAbout && <TextFile onClickCross={ () => {closeAbout()} } title="About.txt" content={<AboutContent/>}/>}
             {showContact && <TextFile onClickCross={() => {closeContact()}} title="Contact.txt" content={<ContactContent/>}/>}
 

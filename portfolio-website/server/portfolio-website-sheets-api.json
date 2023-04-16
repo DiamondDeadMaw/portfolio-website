@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "portfolio-website-sheets-api",
+  "private_key_id": "0f7dca3f49b60243f5bb818dd3b20ebf8a264bed",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCReFeUq2bDAtBO\naEn4VTNWWmQf+lznwIGb6nFkcAAmSeKtV6vSSnWnfmJ48Wlx/bKNsWRT00mbvUzi\nhxYw0hR4JKfRSbCFV6Esq8Tlm6tFsSbchA0W+vBOdgLZCEHQy7OhqxdJpRvEKwqm\ndV78a/zRIN9xodnnzIHTIYcARmoGRm7WmnQeNYzYc+qgDLweUGOvv7iA8wm1pRlO\n8y3J9I6MAUqFg0zkj9tHgqWeyC5sxZfFopiVfCxzYdXIUbCu2Xzs7KdRdrkSaqeM\nyU6ZGSerhBteBpKC6NoDN/Gprcjzzd33wCWNlKfJol4yzS8OcDWvIqsVKFgFjkMb\n45UtGgvNAgMBAAECggEAANSivKgxQBYfXgxVnz6rqNkt9iGZoPnEk6+3nvyrXV4O\nxSAcacBRUPrm1EQvV2zxQRQXPpWPDtUpCJyLcMdU2S4iCXHdM6PkM3+qCXzz/abb\nl8nJ30Ea9gXo+mOVhYe0l3tt5zmKsD/xqmtVpXEZxW2ljg9ui9arQY4cnLOV3J8q\ncWOYUfX0uDjbJbpDAJqgXxOpPNR0ifMcwNGvUepki0nvVB0L488n/tZFk0MXihKr\nRxt6tdToPaLlpG8sbiSpOkjbv+PqdTADt/zqYN1l4ZVeJjb90QICmb5AvmM8I7nz\n26dL1lRXQ1AE+wrxEUY04u8hEcc8a0Hlmw27OUQuUQKBgQDNO16nn8d6WazU8aty\nr9zugda5f1/rUEk10L3t9oc1bHyCRNarP179tphX5XCPAjk1bIBuo+EwFbE5tjuI\nZEfKCUybQK53Gvxa4GCeRUoBHLBgkl0nrx2m/N1gujBVX3f7xz5llA6rrTkktIuj\nk7CZSWn69ivw53DNc9iYdueifQKBgQC1dHYxxHDfNFv0PfuJvLHCqBSoaMKVa3WP\nTNajGBz58AiUyU21Mdq4+GxErtOBk0wh8f9x+7GLEWzgwNlhDvkOzN20BHLA7Izy\nYj7stgowiXazkkVID+mhbgkiTsSgtgcHIxOZBLR8/kml2irkv8QGhqRFVmx6jqtq\nF2LA0md/kQKBgQCXAyuIDgK63YdV/SmZrxvTCAjW34nV3XKxPZKzqaYdwmDvffWz\ndmLQL25zpqknIYy06cyrHL0TI7MPcy7lElzcpfEPgA2gKGQt/lI5w2RL4y9JMAmJ\nrMoV2JSQmw/7kc74ncgk+Ee/PSwB/TOOvprAgAuSlVcJ4VLYanii30NcBQKBgFRa\nOX/VNCtu6bhXABH9uB0nicLoQFy5wcLGE5lp4j6GSVbxZcBv1p/aTGp5YzV/RgsZ\ntohEWzqs9RJeVC98iGdK8V14G+h3juY2qc3cqkv5+0ZrHu3rB87VmkVqnJmhRQ8a\nTUf7GfRpOc9x5jLEutnVyZO6I1+t5x3AlVXR+e8hAoGAXGSx8CbtBnx90o/zHdam\nJePyJnjvv+aykMzZ7intUNZ+fVCP4pmXV+FCM91nQ3gGoWBvtnT5saQu0W+mpd5F\n1vP9/oaVdu4o71HJ7+fWerQW3nIIErcrZBRuVBt+hvms6btu6cCW9wJf6/m4X8oa\ne+BDc9L1TzblRr81721Jej0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "portfolio-website-database-ser@portfolio-website-sheets-api.iam.gserviceaccount.com",
+  "client_id": "105577161794761119001",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/portfolio-website-database-ser%40portfolio-website-sheets-api.iam.gserviceaccount.com"
+}
