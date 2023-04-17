@@ -68,11 +68,20 @@ function MainContent({project_data}) {
             Image={project_data[i].Image}
         />)
     }
-    return (
-        <div className='main-content-container'>
-           {cards}
-        </div>
-    )
+    if (cards.length > 0) {
+        return (
+            <div className='main-content-container'>
+               {cards}
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <h1>Loading...</h1>
+            </div>
+        )
+    }
+    
 }
 
 function Cross({close}) {
