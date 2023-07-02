@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
   }
   
   .desktop-container {
@@ -102,4 +103,13 @@
   .content-text {
     color: black;
   }
+  #root {
+    background-color: white !important;
+  }
 
+.switch-text {
+  bottom: 0;
+  position: absolute;
+  padding-bottom: 20px;
+  cursor: pointer;
+}

@@ -18,7 +18,7 @@ import power from "./assets/images/power_button.png"
 import resume from "./assets/other/resume.pdf"
 
 
-export default function Landing({onPowerClicked}) {
+export default function Landing({onPowerClicked, changeToMobile}) {
 
     const possibleIcons = ["Projects", "About", "Contact", "Resumé"]
 
@@ -113,6 +113,8 @@ const [project_data, setProjectData] = useState({});
             {taskbarIcons}
             </div>
             </div>
+
+            <a className='switch-text' onClick={()=>changeToMobile()}>Something looks wrong? Click here to switch to the mobile layout.</a>
         </div>
     )
 }

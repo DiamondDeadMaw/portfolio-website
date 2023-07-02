@@ -25,6 +25,8 @@ function App() {
 
     const [matches, setMatches] = useState(window.matchMedia("(min-width: 700px)").matches);
 
+    const [showMobile, setShowMobile] = useState(false);
+
     useEffect(() => {
       window.matchMedia("(min-width: 700px)").addEventListener("change", e=> setMatches(e.matches)); 
     }, []);
@@ -41,7 +43,11 @@ function App() {
       setShowLanding(false);
     }
 
-    if (!matches) {
+    function toShowMobile() {
+      setShowLanding(false);
+      setShowMobile(true);
+    }
+    if (!matches || showMobile) {
       return (
         <Mobile/>
       );
@@ -65,6 +71,7 @@ function App() {
         <h1 className='WorldOfText'> to the world of</h1>
         <h1 className='ArmaanText'>Armaan</h1>
         <button className="enter-button" onClick={handleButtonClick}>Enter &gt;&gt;</button>
+
       </div>
       )
     }
@@ -73,7 +80,7 @@ function App() {
   if (!showLanding) {
     return <AppHome/>
   } else {
-    return <Landing onPowerClicked={() => {returnToPage()}}/>
+    return <Landing onPowerClicked={() => {returnToPage()}} changeToMobile={toShowMobile}/>
   }
 }
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
 
 .mobile-content {
     padding: 0;
@@ -14,6 +15,13 @@
     background-color: black;
     padding: 10px;
     border-bottom: 1px solid #ccc; 
+
+    position: fixed;
+    top: 0;
+    left: 0;
+  right: 0;
+
+  z-index: 100;
 }
 
 .nav-button {
@@ -21,24 +29,39 @@
     color: white;
     font-weight: 600;
     font-size: 18px;
+
+    z-index: 101;
+    cursor: pointer;
 }
 
 .nav-name {
     color: white;
     font-size: 20px;
     font-weight: 700;
+    opacity: 0;
+    will-change: opacity;
+
+    cursor: pointer;
+}
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 .welcome-text-top {
     color: white;
     font-size: 25px;
-    padding: 0px 20px 0px 20px;
+    padding: 100px 20px 0px 20px;
     font-weight: 700;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .welcome-text {
     color: white;
     font-size: 17px;
-    padding: 0px 50px 0px 50px
+    padding: 0px 50px 0px 50px;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .welcome-text-name {
@@ -47,31 +70,35 @@
 
 .filter-button {
     width: 70px;
-    height: 30px;
+    height: 25px;
     border: none;
-    border-radius: 6px;
-    background-color: grey;
+    border-radius: 3px;
+    background-color: rgb(69, 67, 67);
     color: white;
     font-size: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s, transform 0.3s;
 
-    margin: 10px 10px 0px 10px;
+    margin: 6px 6px 0px 6px;
+
+    font-family: 'Roboto', sans-serif;
   }
   .filter-button-selected {
     width: 70px;
-    height: 30px;
+    height: 25px;
     border: none;
-    border-radius: 6px;
-    background-color: rgb(70, 67, 67);
+    border-radius: 3px;
+    background-color: rgb(40, 38, 38);
     color: white;
     font-size: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s, transform 0.3s;
 
-    margin: 10px 10px 0px 10px;
+    margin: 6px 6px 0px 6px;
+
+    font-family: 'Roboto', sans-serif;
   }
   
   .filter-button:hover {
@@ -84,4 +111,83 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 20px 30px 0px 30px;
+
+    margin-bottom: -40px;
+  }
+.projects-title {
+    color: white;
+}
+  #root {
+    overflow: scroll;
+    background-color: black !important;
+  }
+  body {
+    background-color: black;
+  }
+
+  .project-container {
+    position: relative;
+    padding: 10px;
+    margin-top: 70px;
+  }
+  
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.792);
+    color: white;
+    text-align: center;
+  }
+  .project-image {
+    width: 100%;
+  }
+  .project-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .project-content {
+    font-size: 16px;
+    padding: 15px;
+
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .project-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 5px 20px;
+    bottom: 0;
+    margin-top: 20px;
+  }
+
+  .project-tech {
+    padding: 0;
+    margin: 0;
+    color: grey;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+
+    font-family: 'Roboto', sans-serif;
+    
+  }
+  .project-link {
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  .email {
+    color: #446cff;
+    font-family: "Roboto";
+    font-weight: 600;
+    padding-bottom: 200px;
   }
