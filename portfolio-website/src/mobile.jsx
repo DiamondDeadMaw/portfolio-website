@@ -46,16 +46,16 @@ function Mobile() {
         var p = [];
         console.log(`Length of data: ${Object.keys(data).length}`)
         for (let i = 0; i< data.length; i++ ) {
-            
+            console.log(i);
             if (filter === "all" || data[i].Tech === filter) {
                 var cur = data[i];
                 p.push(
                     <ProjectSection title={cur.Name} text={cur.Description} link={cur.Link} image={cur.Image} tech={cur.Tech}/>
-                );
+                )
+                setProjects(p);
             }
         }
-        console.log(`Length of projects: ${p.length}`)
-        setProjects(p);
+        
     }
     useEffect(() => {
         const getData = async () => {
@@ -71,7 +71,7 @@ function Mobile() {
 
     useEffect(
         () => {
-            console.log(projects.length);
+            console.log(`useeffect: ${(projects[0])} s`);
         }, [projects]
     )
 
