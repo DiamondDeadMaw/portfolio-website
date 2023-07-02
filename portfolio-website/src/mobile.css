@@ -1,0 +1,87 @@
+
+.mobile-content {
+    padding: 0;
+    background-color: black;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.mobile-navbar {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    border-bottom: 1px solid #ccc; 
+}
+
+.nav-button {
+    padding: 0 10px 0 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.welcome-text-top {
+    color: white;
+    font-size: 25px;
+    padding: 0px 20px 0px 20px;
+    font-weight: 700;
+}
+
+.welcome-text {
+    color: white;
+    font-size: 17px;
+    padding: 0px 50px 0px 50px
+}
+
+.welcome-text-name {
+    color: yellow;
+}
+
+.filter-button {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: grey;
+    color: white;
+    font-size: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+
+    margin: 10px 10px 0px 10px;
+  }
+  .filter-button-selected {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(70, 67, 67);
+    color: white;
+    font-size: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+
+    margin: 10px 10px 0px 10px;
+  }
+  
+  .filter-button:hover {
+    background-color: #707070;
+    transform: scale(1.05);
+  }
+
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 20px 30px 0px 30px;
+  }

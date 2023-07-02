@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {Routes, Route, useNavigate} from "react-router-dom"
 import './App.css'
 import backgroundImage from './assets/images/home_background_image.jpg'
 import backgroundVideo from './assets/videos/background_video.mp4'
 import Landing from "./Landing"
-
+import Mobile from "./mobile.jsx"
 
 
 function HomePageBackground(props) {
@@ -22,6 +22,12 @@ function App() {
   const [showLanding, setShowLanding] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
     const [hideContent, setHideContent] = useState(false)
+
+    const [matches, setMatches] = useState(window.matchMedia("(min-width: 700px)").matches);
+
+    useEffect(() => {
+      window.matchMedia("(min-width: 700px)").addEventListener("change", e=> setMatches(e.matches)); 
+    }, []);
   
     const handleButtonClick = () => {
       setPlayVideo(true);
@@ -34,9 +40,15 @@ function App() {
       setHideContent(false);
       setShowLanding(false);
     }
+
+    if (!matches) {
+      return (
+        <Mobile/>
+      );
+    }
   function AppHome() {
     
-  
+    
   
     if (hideContent) {
       return (
