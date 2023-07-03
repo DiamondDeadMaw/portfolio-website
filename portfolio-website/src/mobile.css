@@ -71,9 +71,10 @@
 .filter-button {
     width: 70px;
     height: 25px;
-    border: none;
+    border: 1px solid white;
+
     border-radius: 3px;
-    background-color: rgb(69, 67, 67);
+    background-color: black;
     color: white;
     font-size: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
@@ -89,10 +90,10 @@
     height: 25px;
     border: none;
     border-radius: 3px;
-    background-color: rgb(40, 38, 38);
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 10px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     transition: background-color 0.3s, transform 0.3s;
 

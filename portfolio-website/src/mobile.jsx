@@ -9,15 +9,22 @@ const Image = ({ filename }) => {
   };
 
 function ProjectSection({title, text, image, tech, link}) {
+        
     const [isVisible, setVisible] = useState(true);
     const domRef = useRef();
-    useEffect(() => {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => setVisible(entry.isIntersecting));
+    document.addEventListener("DOMContentLoaded", function(){
+
+        useEffect(() => {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+          });
+          observer.observe(domRef.current);
+          return () => observer.unobserve(domRef.current);
+        }, []);
+      
+      
       });
-      observer.observe(domRef.current);
-      return () => observer.unobserve(domRef.current);
-    }, []);
+    
 
 
     const imagePath = `./project_images/${image}`;
@@ -109,7 +116,7 @@ function Mobile() {
     }
 
     const name = document.getElementById("name");
-    try {
+    if (!showName) {
         window.addEventListener('scroll', () => {
        
             const rect = name.getBoundingClientRect();
@@ -118,12 +125,17 @@ function Mobile() {
               changeOpacity();
             }
           }, true);
-    } catch (error) {
-        if (error instanceof TypeError) {
-            var i = 1;
-            
-          } 
+    } else {
+        window.removeEventListener(scroll, () => {
+       
+            const rect = name.getBoundingClientRect();
+            const distanceFromTop = rect.top - window.scrollY;
+            if (distanceFromTop < 90) {
+              changeOpacity();
+            }
+          }, true )
     }
+ 
 
       const projectRef = useRef(null);
 
