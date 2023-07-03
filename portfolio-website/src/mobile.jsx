@@ -9,9 +9,20 @@ const Image = ({ filename }) => {
   };
 
 function ProjectSection({title, text, image, tech, link}) {
+    const [isVisible, setVisible] = useState(true);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+      return () => observer.unobserve(domRef.current);
+    }, []);
+
+
     const imagePath = `./project_images/${image}`;
     return (
-        <div className='project-container'>
+        <div className={`project-container ${isVisible ? "visible" : ""}`} ref={domRef}>
         <Image filename={image}></Image>
         <div className='project-overlay'>
             <p className='project-title'>{title}</p>
@@ -98,14 +109,21 @@ function Mobile() {
     }
 
     const name = document.getElementById("name");
-    window.addEventListener('scroll', () => {
+    try {
+        window.addEventListener('scroll', () => {
        
-        const rect = name.getBoundingClientRect();
-        const distanceFromTop = rect.top - window.scrollY;
-        if (distanceFromTop < 90) {
-          changeOpacity();
-        }
-      }, true);
+            const rect = name.getBoundingClientRect();
+            const distanceFromTop = rect.top - window.scrollY;
+            if (distanceFromTop < 90) {
+              changeOpacity();
+            }
+          }, true);
+    } catch (error) {
+        if (error instanceof TypeError) {
+            var i = 1;
+            
+          } 
+    }
 
       const projectRef = useRef(null);
 
